@@ -16,6 +16,11 @@
     <link href="<?php bloginfo('stylesheet_url'); ?>" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
     <?php wp_head(); ?>
+    <style>
+  .showcase{
+    background:url(<?php echo get_theme_mod('showcase_image', get_bloginfo('template_url').'/img/showcase.jpg'); ?>) no-repeat center center;
+  }
+</style>
   </head>
   <body>
     <div class="blog-masthead">
@@ -40,9 +45,9 @@
 
 <section class="showcase">
     <div class="container">
-      <h1>Custom Wordrpess Theme</h1>
-      <p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Quisque velit nisi, pretium ut lacinia in, elementum id enim.</p>
-      <a class="btn btn-primary btn-lg">Read more</a>
+      <h1><?php echo get_theme_mod('showcase_heading', 'Custom Wordrpess Theme'); ?></h1>
+      <p><?php echo get_theme_mod('showcase_text', 'Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Quisque velit nisi, pretium ut lacinia in, elementum id enim.');?></p>
+      <a href="<?php echo get_theme_mod('btn_url', 'http://test.com'); ?>" class="btn btn-primary btn-lg"><?php echo get_theme_mod('btn_text', 'Read More'); ?></a>
     </div>
 </section>
 
@@ -75,7 +80,7 @@
 </footer>
 <?php wp_footer(); ?>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="<?php bloginfo('template_url'); ?>/js/bootstrap.js"></script>
 </body>
 </html>
